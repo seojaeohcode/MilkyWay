@@ -1,1 +1,1 @@
-# infoBlock
+# MilkyWay
