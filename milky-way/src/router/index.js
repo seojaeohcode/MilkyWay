@@ -1,11 +1,11 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Header from "../views/Header.vue"
+import About from "../views/About.vue"
 import Award from "../views/Award.vue"
 const routes = [
   {
     path: "/",
-    name: "Header",
-    component: Header,
+    name: "About",
+    component: About,
   },
   {
     path: "/award",
