@@ -9,6 +9,7 @@ import FooterVue from './fixedVue/Footer.vue'
 <template>
 <!-- 안 바뀌는 정적 헤더(fixed vue와 dynamic vue를 정리) -->
   <div id="nav">
+  <!-- 메뉴구성 -->
       <router-link to="/">About</router-link>
       <router-link to="/award">Award</router-link>
   </div>
@@ -25,6 +26,7 @@ import FooterVue from './fixedVue/Footer.vue'
 </template>
 
 <style scoped>
+/* CSS => App.vue에서는 scoped 제거  */
 #app {
   /* font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
