@@ -8,12 +8,6 @@ import FooterVue from './fixedVue/Footer.vue'
 
 <template>
 <!-- 안 바뀌는 정적 헤더(fixed vue와 dynamic vue를 정리) -->
-  <div id="nav">
-  <!-- 메뉴구성 -->
-      <router-link to="/">About</router-link>
-      <router-link to="/award">Award</router-link>
-  </div>
-  
   <!-- 헤더 -->
   <HeaderVue></HeaderVue>
   
@@ -27,7 +21,17 @@ import FooterVue from './fixedVue/Footer.vue'
 
 <style>
 /* CSS => App.vue에서는 scoped 제거  */
+html{
+  font-size: 10px;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
 #app {
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   /* font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,4 +39,8 @@ import FooterVue from './fixedVue/Footer.vue'
   color: #2c3e50;
   margin-top: 60px; */
 }
+</style>
+
+<style scoped>
+
 </style>

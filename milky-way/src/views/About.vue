@@ -3,3 +3,9 @@
         <h2>About</h2>
     </div>
 </template>
+
+<style scoped>
+h2{
+    color: white;
+}
+</style>
