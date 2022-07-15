@@ -25,7 +25,7 @@ import FooterVue from './fixedVue/Footer.vue'
   <!--<HelloWorld></HelloWorld>-->
 </template>
 
-<style scoped>
+<style>
 /* CSS => App.vue에서는 scoped 제거  */
 #app {
   /* font-family: Avenir, Helvetica, Arial, sans-serif;
