@@ -11,7 +11,7 @@ import FooterVue from './fixedVue/Footer.vue'
   <!-- 헤더 -->
   <HeaderVue></HeaderVue>
   
-  <!-- 라우터 뷰 -->
+   <!-- 라우터 뷰 -->
   <router-view />
   
   <!-- 푸터 -->
