@@ -21,17 +21,23 @@ import FooterVue from './fixedVue/Footer.vue'
 
 <style>
 /* CSS => App.vue에서는 scoped 제거  */
+html, body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+} 
+
 html{
   font-size: 10px;
 }
+
 body{
-  margin: 0;
-  padding: 0;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-repeat: no-repeat;
 }
 #app {
-  height: 100vh;
-  overflow: hidden;
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   /* font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
