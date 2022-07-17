@@ -31,7 +31,7 @@
                 <div id="induce" class="">
                     <!-- 아이콘넣기 -->
                     <h4> 
-                    <p>click The Menu &amp; Look Down</p>
+                    <p><span class="material-icons iconsizeup">keyboard_double_arrow_up</span> click The Menu &amp; Look Down <span class="material-icons iconsizeup">keyboard_double_arrow_down</span></p>
                     </h4>
                 </div>
             </div>
@@ -81,6 +81,10 @@ a:hover {
     text-shadow: /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 
     /* Green glow */ 0 0 24px #0fa, 0 0 41px #0fa, 0 0 46px #0fa, 0 0 51px #0fa, 0 0 75px #0fa;
 }
+a:active{
+    text-shadow: /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 
+    /* Green glow */ 0 0 24px rgb(218, 255, 86), 0 0 41px rgb(218, 255, 86), 0 0 46px rgb(218, 255, 86), 0 0 51px rgb(218, 255, 86), 0 0 75px rgb(218, 255, 86);
+}
 
 a:nth-child(n+2) {
     margin-left: 1rem;
@@ -118,7 +122,7 @@ a:nth-child(n+2) {
     justify-content: space-evenly;
     color: white;
     font-size: 3rem;
-    min-height: 750px;
+    min-height: 75rem;
     flex-shrink: 1;
     flex-basis: content;
     /* 로고를 넣고 사이즈 조정 => 배경은 제거하는걸로 */
@@ -150,5 +154,10 @@ a:nth-child(n+2) {
 
 .alpha{
     color: rgba(255, 255, 255, 0.75);
+}
+
+.iconsizeup{
+    font-size: 3.6rem;
+    vertical-align: middle;
 }
 </style>

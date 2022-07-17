@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <h2>Footer</h2>
+    <div id="wrap">
+        <span class="material-icons-round">
+            face_retouching_natural
+        </span>
     </div>
 </template>
 
 <style scoped>
-h2 {
-    color: white;
-    margin-bottom: 0;
-}
 </style>
