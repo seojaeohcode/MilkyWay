@@ -51,6 +51,8 @@
 /* Libre */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
 
+/* 클래스 => 분리 / 반응형 => 미디어쿼리 */
+
 p{
     margin: 0;
     /*font-family: 'Libre Baskerville', serif;*/
