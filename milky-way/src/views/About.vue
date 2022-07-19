@@ -1,6 +1,16 @@
 <template>
-    <div>
-        <h2>About</h2>
+    <div id="wrap">
+        <div>
+        
+        </div>
+        
+        <div>
+        
+        </div>
+        
+        <div>
+        
+        </div>
     </div>
 </template>
 
