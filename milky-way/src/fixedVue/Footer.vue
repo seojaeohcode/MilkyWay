@@ -83,8 +83,8 @@ a {
     }
 
     svg {
-        width: 8vw;
-        height: 8vw;
+        width: 6vw;
+        height: 6vw;
     }
 
     #creator {
@@ -92,7 +92,7 @@ a {
     }
 
     .fontsize{
-        font-size: 3vw;
+        font-size: 2vw;
     }
 }
 </style>

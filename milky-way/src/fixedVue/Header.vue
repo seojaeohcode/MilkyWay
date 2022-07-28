@@ -319,7 +319,7 @@ ul {
         /* color: white;
         font-size: 3rem; */
         /* min-height: 75rem; */
-        width: 90%;
+        width: fit-content;
         margin: 0 auto;
         margin-top: 6rem;
     }
@@ -331,14 +331,14 @@ ul {
     }
 
     #logobox {
-        width: 45vw;
-        height: 45vw;
+        width: 42vw;
+        height: 42vw;
         float: right;
     }
 
     #logobox>img {
-        width: 45vw;
-        height: 45vw;
+        width: 42vw;
+        height: 42vw;
     }
 
     #explain {
