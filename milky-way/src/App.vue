@@ -12,7 +12,7 @@ import FooterVue from './fixedVue/Footer.vue'
   <HeaderVue></HeaderVue>
   
    <!-- 라우터 뷰 -->
-  <router-view />
+  <!-- <router-view /> -->
   
   <!-- 푸터 -->
   <FooterVue></FooterVue>
@@ -22,8 +22,8 @@ import FooterVue from './fixedVue/Footer.vue'
 <style>
 /* CSS => App.vue에서는 scoped 제거  */
 html, body{
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   overflow-y: auto;

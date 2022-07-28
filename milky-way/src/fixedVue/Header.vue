@@ -2,42 +2,49 @@
     <div class="wrap">
         <div id="nav">
             <!-- 메뉴구성 + 개발 기술별 순서 News = grid형태의 구성방식 + JS 이미지 슬라이드 + DB-->
-            <router-link to="/">About</router-link>
-            <router-link to="/Lab">Lab</router-link>
-            <router-link to="/Technology">Technology</router-link>
-            <router-link to="/Award">Award</router-link>
-            <router-link to="/News">News</router-link>
-            <router-link to="/Survey">Survey</router-link>
+            <li>
+                <router-link to="/">About</router-link>
+            </li>
+            <li>
+                <router-link to="/Lab">Lab</router-link>
+            </li>
+            <li>
+                <router-link to="/Technology">Technology</router-link>
+            </li>
+            <li>
+                <router-link to="/Award">Award</router-link>
+            </li>
+            <li>
+                <router-link to="/News">News</router-link>
+            </li>
+            <li>
+                <router-link to="/Survey">Survey</router-link>
+            </li>
         </div>
         <div id="intro">
-            <!-- 소개 설명 -->
-            <div id="explain">
-                <div id="headline">
-                    <h1>
-                    <p>Milky-Way has a lot of</p>
-                    <p>Information likes Star</p> 
-                    <p>In the milkyway.</p>
-                    </h1>
-                </div>
-
-                <div id="maintext" class="alpha">
-                    <h3>
-                    <p>Laboratory, technical introduction, awards of the month, latest news, surveys, etc</p>
-                    <p>Press the button on the menu to get more news about the development</p>
-                    <p>It will help new developers. Let's learn hard as a new developer.</p>
-                    </h3>
-                </div>
-
-                <div id="induce" class="">
-                    <!-- 아이콘넣기 -->
-                    <h4> 
-                    <p><span class="material-icons iconsizeup">keyboard_double_arrow_up</span> click The Menu &amp; Look Down <span class="material-icons iconsizeup">keyboard_double_arrow_down</span></p>
-                    </h4>
-                </div>
-            </div>
             <!-- 이미지 -->
             <div id="logo">
                 <img src="../assets/HatchfulExport-All/logo-removebg-preview.png" alt="" id="logo">
+            </div>
+            <!-- 소개 설명 -->
+            <div id="explain">
+                <div id="headline">
+                    <p>Milky-Way has a lot of</p>
+                    <p>Information likes Star</p>
+                    <p>In the milkyway.</p>
+                </div>
+
+                <div id="maintext" class="alpha">
+                    <p>Laboratory, technical introduction, awards of the month, latest news, surveys, etc</p>
+                    <p>Press the button on the menu to get more news about the development</p>
+                    <p>It will help new developers. Let's learn hard as a new developer.</p>
+                </div>
+
+                <div id="induce">
+                    <!-- 아이콘넣기 -->
+                    <p><span class="material-icons iconsizeup">keyboard_double_arrow_up</span> click Menu &amp; Look
+                        Down <span class="material-icons iconsizeup">keyboard_double_arrow_down</span></p>
+                </div>
             </div>
         </div>
     </div>
@@ -51,115 +58,101 @@
 /* Libre */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
 
-/* 클래스 => 분리 / 반응형 => 미디어쿼리 */
+/* 모바일 320px부터 체크*/
+@media (max-width:767px) {
 
-p{
-    margin: 0;
-    /*font-family: 'Libre Baskerville', serif;*/
-    font-family: 'Bebas Neue', cursive;
-    letter-spacing: 0.25rem;
+    /* 상용태그 */
+    p {
+        margin: 0;
+        /*font-family: 'Libre Baskerville', serif;*/
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 0.25rem;
+    }
+
+    li {
+        text-align: center;
+        display: block;
+        margin-top: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 4vw;
+        font-family: 'Libre Baskerville', serif;
+    }
+
+    a:hover {
+        text-shadow:
+            /* White glow */
+            0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+            /* Green glow */
+            0 0 24px #0fa, 0 0 41px #0fa, 0 0 46px #0fa, 0 0 51px #0fa, 0 0 75px #0fa;
+    }
+
+    a:active {
+        text-shadow:
+            /* White glow */
+            0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+            /* Green glow */
+            0 0 24px rgb(218, 255, 86), 0 0 41px rgb(218, 255, 86), 0 0 46px rgb(218, 255, 86), 0 0 51px rgb(218, 255, 86), 0 0 75px rgb(218, 255, 86);
+    }
+
+    /* 색상 등 클래스에서 자주 쓸 것들 */
+    .alpha {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    /* 아이디 및 클래스 */
+    #nav {
+        margin-top: 3rem;
+    }
+
+    #intro {
+        /* color: white;
+        font-size: 3rem; */
+        /* min-height: 75rem; */
+    }
+
+    #logo {
+        width: 60vw;
+        height: 60vw;
+        margin: 0 auto;
+    }
+
+    #explain {
+        /* width: 700px;
+        height: 700px;
+        text-align: left;
+        padding-left: 6rem; */
+        text-align: center;
+    }
+
+    #headline {
+        color: white;
+        font-size: 6vw;
+    }
+
+    #maintext {
+        /* margin-top: 3rem;
+        font-size: 4vw; */
+        display: none;
+    }
+
+    #induce {
+        color: rgba(255, 255, 255, 0.85);
+        margin-top: 1rem;
+        font-size: 4vw;
+    }
+
+    .iconsizeup {
+        vertical-align: middle;
+    }
 }
 
-h1{
+/* 태블릿 */
+@media (min-width:768px) and (max-width:1024px) {}
 
-}
-
-h3{
-
-}
-
-h4{
-    
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    font-size: 3rem;
-    font-family: 'Libre Baskerville', serif;
-}
-
-a:hover {
-    text-shadow: /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 
-    /* Green glow */ 0 0 24px #0fa, 0 0 41px #0fa, 0 0 46px #0fa, 0 0 51px #0fa, 0 0 75px #0fa;
-}
-a:active{
-    text-shadow: /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 
-    /* Green glow */ 0 0 24px rgb(218, 255, 86), 0 0 41px rgb(218, 255, 86), 0 0 46px rgb(218, 255, 86), 0 0 51px rgb(218, 255, 86), 0 0 75px rgb(218, 255, 86);
-}
-
-a:nth-child(n+2) {
-    margin-left: 1rem;
-}
-
-/* 전체 wrap flex */
-.wrap {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    flex-basis: content;
-    /* min-width: ; */
-    /* height: 40px; */
-    /* flex로 구성하고 flex no-wrap으로 메뉴바 구성 */
-    /* overflow: hidden; hidden이 float이 벗어나는 것을 막아준다. */
-    /* 밑으로 떨어지는 것을 막으려면? */
-}
-
-/* 네비게이션 바 */
-#nav {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    flex-shrink: 1;
-    margin-top: 3rem;
-    /* display: inline-block;
-    width: fit-content; */
-    /* float: right; 플롯은 단점이 많아서 사용하기엔 꺼려지는 기능 div에서 자동 줄바꿈 되는 것이 너무 단점. 그럴 바엔 flex로 정렬하는 것이 훨씬 낫다. */
-}
-
-/* 인트로 */
-#intro {
-    display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: space-evenly;
-    color: white;
-    font-size: 3rem;
-    min-height: 75rem;
-    flex-shrink: 1;
-    flex-basis: content;
-    /* 로고를 넣고 사이즈 조정 => 배경은 제거하는걸로 */
-}
-
-#explain {
-    width: 700px;
-    height: 700px;
-    text-align: left;
-    padding-left: 6rem;
-}
-
-#headline{
-
-}
-
-#maintext{
-
-}
-
-#induce{
-
-}
-
-#logo {
-    width: 700px;
-    height: 700px;
-}
-
-.alpha{
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.iconsizeup{
-    font-size: 3.6rem;
-    vertical-align: middle;
-}
+/* PC */
+@media (min-width:1025px) {}
 </style>
