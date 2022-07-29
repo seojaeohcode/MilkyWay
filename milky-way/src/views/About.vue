@@ -10,7 +10,7 @@
         </div>
         <div id="explain">
             <div>
-
+            why
             </div>
             
             <div>
@@ -52,6 +52,7 @@
 
     #zodiacimg>img {
         width: 60vw;
+        border-radius: 20px;
     }
 }
 
