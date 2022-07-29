@@ -6,11 +6,11 @@
 
         <!-- 2개는 서로 float -->
         <div id="zodiacimg">
-            <img src="../assets/zodiac/aquarius.svg" alt="">
+            <img src="../assets/zodiac/sagittarius.png" alt="">
         </div>
         <div id="explain">
             <div>
-            why
+            why Milky Way?
             </div>
             
             <div>
