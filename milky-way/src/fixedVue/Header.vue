@@ -1,3 +1,4 @@
+
 <template>
     <div class="wrap">
         <div id="nav">
@@ -74,7 +75,7 @@ ul {
 }
 
 /* 모바일 320px부터 체크*/
-@media (max-width:767px) {
+@media (min-width: 320px) and (max-width:767px) {
 
     /* 상용태그 */
     p {
@@ -162,7 +163,7 @@ ul {
 }
 
 /* 태블릿 */
-@media (min-width:768px) and (max-width:1024px) {
+@media (min-width: 768px) and (max-width:1024px) {
 
     /* 상용태그 */
     p {
@@ -252,7 +253,7 @@ ul {
 }
 
 /* PC */
-@media (min-width:1025px) {
+@media (min-width: 1025px) {
 
     /* 상용태그 */
     p {

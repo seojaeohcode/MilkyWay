@@ -35,7 +35,7 @@ a {
 }
 
 /* 모바일 320px부터 체크*/
-@media (max-width:767px) {
+@media (min-width: 320px) and (max-width:767px)  {
 
     /* 아이디 및 클래스 */
     #wrap {
@@ -57,7 +57,7 @@ a {
 }
 
 /* 태블릿 */
-@media (min-width:768px) and (max-width:1024px) {
+@media (min-width: 768px) and (max-width:1024px) {
     #wrap {
         margin-top: 1rem;
     }
@@ -77,7 +77,7 @@ a {
 }
 
 /* PC */
-@media (min-width:1025px) {
+@media (min-width: 1025px) {
     #wrap {
         margin-top: 1rem;
     }

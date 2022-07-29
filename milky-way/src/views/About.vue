@@ -32,7 +32,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
 
 /* 모바일 320px부터 체크*/
-@media (max-width:767px) {
+@media (min-width: 320px) and (max-width:767px) {
     #wrap {
         height: fit-content;
         margin-top: 1vh;
@@ -57,7 +57,7 @@
 }
 
 /* 태블릿 */
-@media (min-width:768px) and (max-width:1024px) {
+@media (min-width: 768px) and (max-width:1024px) {
     #wrap {
         height: fit-content;
         margin-top: 1vh;
@@ -72,7 +72,7 @@
 }
 
 /* PC */
-@media (min-width:1025px) {
+@media (min-width: 1025px) and (max-width:1200px) {
     #wrap {
         height: fit-content;
         margin-top: 1vh;
