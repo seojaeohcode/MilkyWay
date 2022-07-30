@@ -1,5 +1,5 @@
 export default {
-    const :zodiac = document.getElementById('zodiacimg'),
+    // const zodiac = document.getElementById('zodiacimg'),
 
     const :images = 
     ["aquarius.png","../assets/zodiac/pisces.png",
@@ -20,3 +20,13 @@ export default {
 // setInterval(function() {
 //     i++;
 // },2000);
+
+// constructor() ;{
+//     this.name = 'Polygon';
+//   }
+
+//"" ''를 정확하게 구분하지 않으면 찾을 수가 없음.
+// const zodiac = document.getElementById('zodiacimg');
+// const bgImage = document.createElement("img");
+// console.log(zodiac);
+// document.body.appendChild(bgImage);
