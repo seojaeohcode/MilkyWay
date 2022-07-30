@@ -39,7 +39,8 @@ a {
 
     /* 아이디 및 클래스 */
     #wrap {
-        margin-top: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
 
     svg {
@@ -59,7 +60,8 @@ a {
 /* 태블릿 */
 @media (min-width: 768px) and (max-width:1024px) {
     #wrap {
-        margin-top: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
 
     svg {
@@ -79,7 +81,8 @@ a {
 /* PC */
 @media (min-width: 1025px) {
     #wrap {
-        margin-top: 1rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
 
     svg {

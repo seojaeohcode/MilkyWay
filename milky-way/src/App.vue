@@ -3,7 +3,8 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 //fixed view는 정적 뷰 / views는 바뀌여야하는 뷰로 구분하기.
 import HeaderVue from './fixedVue/Header.vue';
-import FooterVue from './fixedVue/Footer.vue'
+import FooterVue from './fixedVue/Footer.vue';
+
 </script>
 
 <template>

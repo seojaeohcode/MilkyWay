@@ -1,5 +1,5 @@
-
 <template>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <div class="wrap">
         <div id="nav">
             <!-- 메뉴구성 + 개발 기술별 순서 News = grid형태의 구성방식 + JS 이미지 슬라이드 + DB-->
@@ -94,7 +94,7 @@ ul {
     a {
         text-decoration: none;
         color: white;
-        font-size: 4vw;
+        font-size: 5vw;
         font-family: 'Libre Baskerville', serif;
     }
 
@@ -146,7 +146,7 @@ ul {
 
     #headline {
         color: white;
-        font-size: 6vw;
+        font-size: 7vw;
     }
 
     #maintext {
@@ -158,7 +158,7 @@ ul {
     #induce {
         color: rgba(255, 255, 255, 0.85);
         margin-top: 1rem;
-        font-size: 4vw;
+        font-size: 6vw;
     }
 }
 
