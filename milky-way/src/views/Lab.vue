@@ -1,4 +1,5 @@
 <template>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <div id="wrap">
         <div id="container">
             <div id="html">
@@ -11,7 +12,17 @@
                         </svg>
                     </div>
                     <div class="titletext">
-                        HTML VIEW
+                        <button><span class="material-icons" id="htmlminus">arrow_back</span></button>
+                        <span>HTML VIEW</span>
+                        <button><span class="material-icons" id="htmlplus">arrow_forward</span></button>
+                    </div>
+                    <div id="htmlstorage">
+                        <div class="category">
+
+                        </div>
+                        <div class="view">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -25,7 +36,17 @@
                         </svg>
                     </div>
                     <div class="titletext">
-                        CSS VIEW
+                        <button><span class="material-icons" id="cssminus">arrow_back</span></button>
+                        <span>CSS VIEW</span>
+                        <button><span class="material-icons" id="cssplus">arrow_forward</span></button>
+                    </div>
+                    <div id="cssstorage">
+                        <div class="category">
+
+                        </div>
+                        <div class="view">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,7 +60,17 @@
                         </svg>
                     </div>
                     <div class="titletext">
-                        JS VIEW
+                        <button><span class="material-icons" id="jsminus">arrow_back</span></button>
+                        <span>JS VIEW</span>
+                        <button><span class="material-icons" id="jsplus">arrow_forward</span></button>
+                    </div>
+                    <div id="jsstorage">
+                        <div class="category">
+
+                        </div>
+                        <div class="view">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,21 +91,60 @@
     background: rgba(255, 255, 0, .5);
 }
 
-.title {
-    font-size: 7vw;
-    color: white;
-    text-shadow: 2px 2px 2px gray;
-    margin: 0 auto;
+#htmlstorage {
+    background: gray;
+}
+
+#cssstorage {
+    background: gray;
+}
+
+#jsstorage {
+    background: gray;
 }
 
 @media (min-width: 320px) and (max-width:767px) {
-    .title>.titleimg{
+    .title {
+        font-size: 8vw;
+        text-shadow: 2px 2px 2px gray;
+        margin: 0 auto;
+        vertical-align: middle;
+        color: white;
+    }
+
+    .view {
+        /* overflow-x: scroll; */
+        width: fit-content;
+        margin: 0 auto;
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+    }
+
+    .material-icons {
+        font-size: 8vw;
+    }
+
+    .titletext button {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .titletext span {
+        vertical-align: middle;
+        margin: 1rem;
+        color: white;
+    }
+
+    .title>.titleimg {
         width: fit-content;
         margin: 0 auto;
     }
-    
-    .title>.titletext{
+
+    .title>.titletext {
         width: fit-content;
+        height: fit-content;
         margin: 0 auto;
     }
 
@@ -82,6 +152,12 @@
         width: 10vw;
         fill: white;
         vertical-align: middle;
+    }
+
+    .category {
+        text-align: center;
+        font-size: 10vw;
+
     }
 }
 
@@ -91,7 +167,219 @@
 </style>
 
 <script>
-export default {
+const htmls = [
+    // form1
+    `
+        Text<br><input type="text" autofocus><br><br>
+        Main<br><input type="email" placeholder="메일을 입력하세요"><br><br>
+        Password<br><input type="password"><br><br>
+        Tel<br><input type="tel"><br><br>
+        Search<br><input type="search"><br><br>
+        Number<br><input type="number" min="1" max="10" step="0.5"><br><br>
+        range<br><input type="range" style="margin-bottom: 3rem">`,
+    // form2
+    `color<br><input type="color"><br><br>
+        Month<br><input type="month"><br><br>
+        Week<br><input type="week"><br><br>
+        Day<br><input type="date"><br><br>
+        Time<br><input type="time"><br><br>
+        Datetime<br><input type="datetime"><br><br>
+        Datetime-Local<br><input type="datetime-local" style="margin-bottom: 3rem">`,
+    // form3
+    `Button<br><input type="button"><br><br>
+        File<br><input type="file"><br><br>
+        RadioButton<br>Male<input type="radio" name="radio" checked><br>Female<input type="radio" name="radio"><br><br>
+        Checkbox<br><input type="checkbox"><br><br>
+        <select style="margin-bottom: 3rem">
+            <option>Choose</option>
+            <option>gmail.com</option>
+            <option>naver.com</option>
+        </select>`,
+    // form4
+    `<form>
+        <h1>필수정보</h1>
+        <label>이름</label><br><input type="text" maxlength="4" size="10" placeholder="이름을 입력하세요" autofocus required><br>
+        <label>회원등급</label><br><input type="text" size="10" readonly value="신입회원"><br>
+        <label>아이디</label><br><input type="text" size="20" placeholder="아이디를 입력하세요" required><button>중복확인</button><br>
+        <label>비밀번호</label><br><input type="password" placeholder="숫자포함 10자 비밀번호" size="20" required><br>
+        <label>비밀번호확인</label><br><input type="password" placeholder="다시 한번 비밀번호 입력" size="20" required><br>
+        <label>휴대폰 번호</label><br>
+        <select>
+            <option>선택</option>
+            <option>010</option>
+            <option>011</option>
+            <option>016</option>
+            <option>017</option>
+        </select>
+        - <input type="text" size="6" required> - <input type="text" size="6" required><button>중복확인</button><br>
+        <label>이메일</label><br><input type="text" size="10" required>@<input type="text" size="15" required>
+        <select>
+            <option>직접입력</option>
+            <option>naver.com</option>
+            <option>daum.net</option>
+            <option>gmail.com</option>
+        </select>
+        <button>중복확인</button><br>
+        <input type="checkbox" checked>정보수신에 동의합니다.<br>
 
+        <h1>선택정보</h1>
+        <label>자택</label>
+        <label>주소</label><br><input type="text" size="15" placeholder="상세주소"><button>우편번호검색</button><br>
+        <label>전화번호</label><br>
+        <select>
+            <option>선택</option>
+            <option>010</option>
+            <option>02</option>
+        </select>
+        - <input type="text" size="5"> - <input type="text" size="5"><br>
+        <label>직장</label>
+        <label>주소</label><br><input type="text" size="15" placeholder="상세주소"><button>우편번호검색</button><br>
+        <label>전화번호</label><br>
+        <select>
+            <option>선택</option>
+            <option>032</option>
+            <option>031</option>
+        </select>
+        - <input type="text" size="5"> - <input type="text" size="5"><br>
+        <label>생년월일</label><br><input type="date">
+        <input type="radio" name="birthday" checked>양력<input type="radio" name="birthday">음력<br><br>
+
+        <input type="reset" value="취소"><button type="submit" style="margin-bottom: 3rem">확인</button>
+    </form>`,
+    // p
+    `
+    <p>
+    Pellentesque fermentum faucibus odio, maximus consequat arcu placerat in. Ut quis urna vitae odio sollicitudin posuere scelerisque ac arcu. Pellentesque sit amet suscipit massa, a vehicula lorem. Duis id lacus ante. Maecenas quis suscipit lacus, in luctus mi. Pellentesque sed erat blandit, aliquet nibh a, consequat ante. Nunc ultricies tortor sem, vitae commodo ex iaculis a. Nam pharetra et nisl et posuere. 
+    </p>
+    <p style="margin-bottom: 0">
+    Quisque at urna sed tortor eleifend malesuada. Sed congue ante eu congue egestas. Praesent ornare hendrerit nisl eget blandit. Vivamus et leo at velit euismod auctor a at tellus. Vestibulum commodo sed lacus sit amet pretium. Mauris pulvinar pretium elit, et imperdiet erat dignissim finibus. Aliquam metus justo, maximus a efficitur in, rutrum ac dolor. Vestibulum eu ipsum finibus, iaculis nibh a, pretium felis.
+    </p>
+    <br>`
+];
+const csss = [0];
+const jss = [0];
+
+export default {
+    mounted() {
+        let i = 0;
+        const htmlcategory = document.querySelector("#htmlstorage .category");
+        const html = document.querySelector("#htmlstorage .view");
+
+        htmlcategory.innerHTML = `form`;
+
+        // if (i < 4) {
+        //     htmlcategory.innerHTML = `form`;
+        // }else if(i < 6){
+        //     htmlcategory.innerHTML = `p`;
+        // }
+
+        html.innerHTML = htmls[0];
+
+        const css = document.querySelector("#cssstorage .view");
+        console.log(css);
+
+        const js = document.querySelector("#jsstorage .view");
+        console.log(js);
+
+        document.getElementById("htmlminus").addEventListener('click', htmlMinus);
+        document.getElementById("htmlplus").addEventListener('click', htmlPlus);
+        document.getElementById("cssminus").addEventListener('click', cssMinus);
+        document.getElementById("cssplus").addEventListener('click', cssPlus);
+        document.getElementById("jsminus").addEventListener('click', jsMinus);
+        document.getElementById("jsplus").addEventListener('click', jsPlus);
+
+        function htmlMinus() {
+            if (i - 1 < 0) {
+                i = htmls.length - 1;
+            }
+            else {
+                i--;
+            }
+            html.innerHTML = htmls[i];
+
+            if (i < 4) {
+                htmlcategory.innerHTML = `form`;
+            } else if (i < 6) {
+                htmlcategory.innerHTML = `p`;
+            }
+        }
+        function htmlPlus() {
+            if (i + 1 >= htmls.length) {
+                i = 0;
+            }
+            else {
+                i++;
+            }
+            html.innerHTML = htmls[i];
+
+            if (i < 4) {
+                htmlcategory.innerHTML = `form`;
+            } else if (i < 6) {
+                htmlcategory.innerHTML = `p`;
+            }
+        }
+        function cssMinus() {
+            if (i - 1 < 0) {
+                i = htmls.length - 1;
+            }
+            else {
+                i--;
+            }
+            html.innerHTML = htmls[i];
+
+            if (i < 4) {
+                htmlcategory.innerHTML = `form`;
+            } else if (i < 6) {
+                htmlcategory.innerHTML = `p`;
+            }
+        }
+        function cssPlus() {
+            if (i + 1 >= htmls.length) {
+                i = htmls.length - 1;
+            }
+            else {
+                i++;
+            }
+            html.innerHTML = htmls[i];
+
+            if (i < 4) {
+                htmlcategory.innerHTML = `form`;
+            } else if (i < 6) {
+                htmlcategory.innerHTML = `p`;
+            }
+        }
+        function jsMinus() {
+            if (i - 1 < 0) {
+                i = htmls.length - 1;
+            }
+            else {
+                i--;
+            }
+            html.innerHTML = htmls[i];
+
+            if (i < 4) {
+                htmlcategory.innerHTML = `form`;
+            } else if (i < 6) {
+                htmlcategory.innerHTML = `p`;
+            }
+        }
+        function jsPlus() {
+            if (i + 1 >= htmls.length) {
+                i = htmls.length - 1;
+            }
+            else {
+                i++;
+            }
+            html.innerHTML = htmls[i];
+
+            if (i < 4) {
+                htmlcategory.innerHTML = `form`;
+            } else if (i < 6) {
+                htmlcategory.innerHTML = `p`;
+            }
+        }
+    },
+    updated() {
+    },
 }
 </script>
