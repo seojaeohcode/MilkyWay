@@ -157,7 +157,7 @@
     .category {
         text-align: center;
         font-size: 10vw;
-
+        text-shadow: 2px 2px 2px black;
     }
 }
 
@@ -168,93 +168,128 @@
 
 <script>
 const htmls = [
-    // form1
-    `
-        Text<br><input type="text" autofocus><br><br>
-        Main<br><input type="email" placeholder="메일을 입력하세요"><br><br>
-        Password<br><input type="password"><br><br>
-        Tel<br><input type="tel"><br><br>
-        Search<br><input type="search"><br><br>
-        Number<br><input type="number" min="1" max="10" step="0.5"><br><br>
-        range<br><input type="range" style="margin-bottom: 3rem">`,
-    // form2
-    `color<br><input type="color"><br><br>
-        Month<br><input type="month"><br><br>
-        Week<br><input type="week"><br><br>
-        Day<br><input type="date"><br><br>
-        Time<br><input type="time"><br><br>
-        Datetime<br><input type="datetime"><br><br>
-        Datetime-Local<br><input type="datetime-local" style="margin-bottom: 3rem">`,
-    // form3
-    `Button<br><input type="button"><br><br>
-        File<br><input type="file"><br><br>
-        RadioButton<br>Male<input type="radio" name="radio" checked><br>Female<input type="radio" name="radio"><br><br>
-        Checkbox<br><input type="checkbox"><br><br>
-        <select style="margin-bottom: 3rem">
-            <option>Choose</option>
-            <option>gmail.com</option>
-            <option>naver.com</option>
-        </select>`,
-    // form4
-    `<form>
-        <h1>필수정보</h1>
-        <label>이름</label><br><input type="text" maxlength="4" size="10" placeholder="이름을 입력하세요" autofocus required><br>
-        <label>회원등급</label><br><input type="text" size="10" readonly value="신입회원"><br>
-        <label>아이디</label><br><input type="text" size="20" placeholder="아이디를 입력하세요" required><button>중복확인</button><br>
-        <label>비밀번호</label><br><input type="password" placeholder="숫자포함 10자 비밀번호" size="20" required><br>
-        <label>비밀번호확인</label><br><input type="password" placeholder="다시 한번 비밀번호 입력" size="20" required><br>
-        <label>휴대폰 번호</label><br>
-        <select>
-            <option>선택</option>
-            <option>010</option>
-            <option>011</option>
-            <option>016</option>
-            <option>017</option>
-        </select>
-        - <input type="text" size="6" required> - <input type="text" size="6" required><button>중복확인</button><br>
-        <label>이메일</label><br><input type="text" size="10" required>@<input type="text" size="15" required>
-        <select>
-            <option>직접입력</option>
-            <option>naver.com</option>
-            <option>daum.net</option>
-            <option>gmail.com</option>
-        </select>
-        <button>중복확인</button><br>
-        <input type="checkbox" checked>정보수신에 동의합니다.<br>
+    // div
+    `<!DOCTYPE html>
+<html lang="en">
 
-        <h1>선택정보</h1>
-        <label>자택</label>
-        <label>주소</label><br><input type="text" size="15" placeholder="상세주소"><button>우편번호검색</button><br>
-        <label>전화번호</label><br>
-        <select>
-            <option>선택</option>
-            <option>010</option>
-            <option>02</option>
-        </select>
-        - <input type="text" size="5"> - <input type="text" size="5"><br>
-        <label>직장</label>
-        <label>주소</label><br><input type="text" size="15" placeholder="상세주소"><button>우편번호검색</button><br>
-        <label>전화번호</label><br>
-        <select>
-            <option>선택</option>
-            <option>032</option>
-            <option>031</option>
-        </select>
-        - <input type="text" size="5"> - <input type="text" size="5"><br>
-        <label>생년월일</label><br><input type="date">
-        <input type="radio" name="birthday" checked>양력<input type="radio" name="birthday">음력<br><br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #wrap1{
+                width: 100%;
+                margin: 0 auto;
+                text-align: justify;
+            }
 
-        <input type="reset" value="취소"><button type="submit" style="margin-bottom: 3rem">확인</button>
-    </form>`,
+        #wrap1 div:last-child {
+            margin-bottom: 0;
+        }
+        
+        #wrap1 div{
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+
+        @media (min-width:320px)and (max-width:767px) {
+            #wrap1 div{
+                font-size: 5vw;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width:1024px) {
+            #wrap1 div{
+                font-size: 3.5vw;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            #wrap1 div{
+                font-size: 2vw;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrap1">
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget massa sed nisi consectetur convallis. Maecenas gravida eros sit amet consectetur blandit. Vivamus nulla nisl, aliquet vitae felis rhoncus, ornare imperdiet nibh. Etiam rhoncus purus ac consectetur ornare. 
+        </div>
+        <div>Aenean fringilla elit non dignissim sodales. Nullam et mauris scelerisque, venenatis lacus vitae, scelerisque orci. Nulla finibus, erat maximus placerat euismod, nisi libero fringilla nulla, eu pharetra orci enim quis nisi. Aliquam bibendum nisi ac nulla sodales, sed fringilla purus vulputate. 
+        </div>
+        <div>Praesent volutpat lectus at finibus blandit. Integer euismod vestibulum est sed lacinia. Fusce fermentum commodo purus ut venenatis. Ut maximus dignissim efficitur. Praesent faucibus elementum purus, consequat maximus elit tempus ac. Curabitur volutpat congue nisl, at aliquam nisl accumsan bibendum.
+        </div>
+    </div>
+</body>
+
+</html>`
+    ,
     // p
-    `
-    <p>
-    Pellentesque fermentum faucibus odio, maximus consequat arcu placerat in. Ut quis urna vitae odio sollicitudin posuere scelerisque ac arcu. Pellentesque sit amet suscipit massa, a vehicula lorem. Duis id lacus ante. Maecenas quis suscipit lacus, in luctus mi. Pellentesque sed erat blandit, aliquet nibh a, consequat ante. Nunc ultricies tortor sem, vitae commodo ex iaculis a. Nam pharetra et nisl et posuere. 
-    </p>
-    <p style="margin-bottom: 0">
-    Quisque at urna sed tortor eleifend malesuada. Sed congue ante eu congue egestas. Praesent ornare hendrerit nisl eget blandit. Vivamus et leo at velit euismod auctor a at tellus. Vestibulum commodo sed lacus sit amet pretium. Mauris pulvinar pretium elit, et imperdiet erat dignissim finibus. Aliquam metus justo, maximus a efficitur in, rutrum ac dolor. Vestibulum eu ipsum finibus, iaculis nibh a, pretium felis.
-    </p>
-    <br>`
+    `<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #wrap1{
+                width: 100%;
+                margin: 0 auto;
+                text-align: justify;
+            }
+            
+        #wrap1 p:last-child{
+                margin-bottom: 0;
+                padding-bottom: 3rem;
+            }
+        
+        #wrap1 p{
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+        
+        @media (min-width:320px)and (max-width:767px) {
+            .font{
+                font-size: 5vw;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width:1024px) {
+            .font{
+                font-size: 3.5vw;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .font{
+                font-size: 2vw;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrap1" class="font">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget massa sed nisi consectetur convallis. Maecenas gravida eros sit amet consectetur blandit. Vivamus nulla nisl, aliquet vitae felis rhoncus, ornare imperdiet nibh. Etiam rhoncus purus ac consectetur ornare. 
+        </p>
+        <p>Aenean fringilla elit non dignissim sodales. Nullam et mauris scelerisque, venenatis lacus vitae, scelerisque orci. Nulla finibus, erat maximus placerat euismod, nisi libero fringilla nulla, eu pharetra orci enim quis nisi. Aliquam bibendum nisi ac nulla sodales, sed fringilla purus vulputate. 
+        </p>
+        <p>Praesent volutpat lectus at finibus blandit. Integer euismod vestibulum est sed lacinia. Fusce fermentum commodo purus ut venenatis. Ut maximus dignissim efficitur. Praesent faucibus elementum purus, consequat maximus elit tempus ac. Curabitur volutpat congue nisl, at aliquam nisl accumsan bibendum.
+        </p>
+    </div>
+</body>
+
+</html>`
+    ,
+    // img
+    ,
+    // table
+    ,
+    // form
 ];
 const csss = [0];
 const jss = [0];
@@ -265,14 +300,15 @@ export default {
         const htmlcategory = document.querySelector("#htmlstorage .category");
         const html = document.querySelector("#htmlstorage .view");
 
-        htmlcategory.innerHTML = `form`;
+        htmlcategory.innerHTML = `div vs p (div)`;
 
         // if (i < 4) {
         //     htmlcategory.innerHTML = `form`;
         // }else if(i < 6){
         //     htmlcategory.innerHTML = `p`;
         // }
-
+        
+        // 애니메이션과 태그카테고리 수정
         html.innerHTML = htmls[0];
 
         const css = document.querySelector("#cssstorage .view");
@@ -295,12 +331,15 @@ export default {
             else {
                 i--;
             }
+
             html.innerHTML = htmls[i];
 
-            if (i < 4) {
-                htmlcategory.innerHTML = `form`;
-            } else if (i < 6) {
-                htmlcategory.innerHTML = `p`;
+            if (i == 0) {
+                htmlcategory.innerHTML = `div vs p (div)`;
+            } else if (i == 1) {
+                htmlcategory.innerHTML = `div vs p (p)`;
+            } else if(i < 3){
+                htmlcategory.innerHTML = `table`;
             }
         }
         function htmlPlus() {
@@ -312,10 +351,12 @@ export default {
             }
             html.innerHTML = htmls[i];
 
-            if (i < 4) {
-                htmlcategory.innerHTML = `form`;
-            } else if (i < 6) {
-                htmlcategory.innerHTML = `p`;
+            if (i == 0) {
+                htmlcategory.innerHTML = `div vs p (div)`;
+            } else if (i == 1) {
+                htmlcategory.innerHTML = `div vs p (p)`;
+            } else if(i < 3){
+                htmlcategory.innerHTML = `table`;
             }
         }
         function cssMinus() {
@@ -327,10 +368,12 @@ export default {
             }
             html.innerHTML = htmls[i];
 
-            if (i < 4) {
-                htmlcategory.innerHTML = `form`;
-            } else if (i < 6) {
-                htmlcategory.innerHTML = `p`;
+            if (i == 0) {
+                htmlcategory.innerHTML = `div vs p (div)`;
+            } else if (i == 1) {
+                htmlcategory.innerHTML = `div vs p (p)`;
+            } else if(i < 3){
+                htmlcategory.innerHTML = `table`;
             }
         }
         function cssPlus() {
@@ -342,10 +385,12 @@ export default {
             }
             html.innerHTML = htmls[i];
 
-            if (i < 4) {
-                htmlcategory.innerHTML = `form`;
-            } else if (i < 6) {
-                htmlcategory.innerHTML = `p`;
+            if (i == 0) {
+                htmlcategory.innerHTML = `div vs p (div)`;
+            } else if (i == 1) {
+                htmlcategory.innerHTML = `div vs p (p)`;
+            } else if(i < 3){
+                htmlcategory.innerHTML = `table`;
             }
         }
         function jsMinus() {
@@ -357,10 +402,12 @@ export default {
             }
             html.innerHTML = htmls[i];
 
-            if (i < 4) {
-                htmlcategory.innerHTML = `form`;
-            } else if (i < 6) {
-                htmlcategory.innerHTML = `p`;
+            if (i == 0) {
+                htmlcategory.innerHTML = `div vs p (div)`;
+            } else if (i == 1) {
+                htmlcategory.innerHTML = `div vs p (p)`;
+            } else if(i < 3){
+                htmlcategory.innerHTML = `table`;
             }
         }
         function jsPlus() {
@@ -372,10 +419,12 @@ export default {
             }
             html.innerHTML = htmls[i];
 
-            if (i < 4) {
-                htmlcategory.innerHTML = `form`;
-            } else if (i < 6) {
-                htmlcategory.innerHTML = `p`;
+            if (i == 0) {
+                htmlcategory.innerHTML = `div vs p (div)`;
+            } else if (i == 1) {
+                htmlcategory.innerHTML = `div vs p (p)`;
+            } else if(i < 3){
+                htmlcategory.innerHTML = `table`;
             }
         }
     },
