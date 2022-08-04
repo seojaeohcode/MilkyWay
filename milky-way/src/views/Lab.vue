@@ -103,23 +103,28 @@
     background: gray;
 }
 
+.view {
+    /* overflow-x: scroll; */
+    /* width: fit-content; */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.material-icons {
+    font-size: 8vw;
+}
+
+.title>.titleimg {
+    width: fit-content;
+    margin: 0 auto;
+}
+
 @media (min-width: 320px) and (max-width:767px) {
     .title {
         font-size: 8vw;
         margin: 0 auto;
         vertical-align: middle;
         color: white;
-    }
-
-    .view {
-        /* overflow-x: scroll; */
-        width: fit-content;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .material-icons {
-        font-size: 8vw;
     }
 
     .titletext button {
@@ -133,11 +138,6 @@
         vertical-align: middle;
         margin: 1rem;
         color: white;
-    }
-
-    .title>.titleimg {
-        width: fit-content;
-        margin: 0 auto;
     }
 
     .title>.titletext {
@@ -160,9 +160,87 @@
     }
 }
 
-@media (min-width: 768px) and (max-width:1024px) {}
+@media (min-width: 768px) and (max-width:1024px) {
+    .title {
+        font-size: 8vw;
+        margin: 0 auto;
+        vertical-align: middle;
+        color: white;
+    }
 
-@media (min-width: 1025px) {}
+    .titletext button {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .titletext span {
+        vertical-align: middle;
+        margin: 1rem;
+        color: white;
+    }
+
+    .title>.titletext {
+        width: fit-content;
+        height: fit-content;
+        margin: 0 auto;
+        text-shadow: 2px 2px 2px gray;
+    }
+
+    .title>.titleimg>svg:nth-child(1) {
+        width: 10vw;
+        fill: white;
+        vertical-align: middle;
+    }
+
+    .category {
+        text-align: center;
+        font-size: 8vw;
+        text-shadow: 2px 2px 2px black;
+    }
+}
+
+@media (min-width: 1025px) {
+    .title {
+        font-size: 6vw;
+        margin: 0 auto;
+        vertical-align: middle;
+        color: white;
+    }
+
+    .titletext button {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    .titletext span {
+        vertical-align: middle;
+        margin: 1rem;
+        color: white;
+    }
+
+    .title>.titletext {
+        width: fit-content;
+        height: fit-content;
+        margin: 0 auto;
+        text-shadow: 2px 2px 2px gray;
+    }
+
+    .title>.titleimg>svg:nth-child(1) {
+        width: 10vw;
+        fill: white;
+        vertical-align: middle;
+    }
+
+    .category {
+        text-align: center;
+        font-size: 8vw;
+        text-shadow: 2px 2px 2px black;
+    }
+}
 </style>
 
 <script>
@@ -357,7 +435,7 @@ const htmls = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         #wrap1{
-                width: 90%;
+                width: 100%;
                 margin: 0 auto;
                 text-align: justify;
                 position:relative;
@@ -385,9 +463,23 @@ const htmls = [
         }
 
         @media (min-width: 768px) and (max-width:1024px) {
+            #wrap1 table:first-child{
+            font-size: 4vw;
+            }
+            
+            #wrap1 table:last-child{
+            font-size: 5vw;
+            }
         }
 
         @media (min-width: 1025px) {
+            #wrap1 table:first-child{
+            font-size: 4vw;
+            }
+            
+            #wrap1 table:last-child{
+            font-size: 4vw;
+            }
         }
     </style>
     <title>Document</title>
@@ -506,15 +598,56 @@ const htmls = [
             margin: 0 auto;
         }
         @media (min-width:320px)and (max-width:767px) {
-            input{
-                width: 50%;
+            #wrap {
+                font-size: 4vw;
             }
+            input{
+                width: 35%;
+                height: 4vw;
+                vertical-align: middle;
+                margin : 0.5rem;
+            }
+        #check{
+            width: 10%;
+        }    
         }
 
         @media (min-width: 768px) and (max-width:1024px) {
+            #wrap {
+                font-size: 4vw;
+            }
+            input{
+                width: 35%;
+                height: 4vw;
+                vertical-align: middle;
+                margin : 0.5rem;
+            }
+        #check{
+            width: 10%;
+        }  
         }
 
         @media (min-width: 1025px) {
+            #wrap {
+                font-size: 3vw;
+            }
+            input{
+                width: 35%;
+                height: 4vw;
+                vertical-align: middle;
+                margin : 0.5rem;
+            }
+            button{
+                height: 4vw;
+                vertical-align: middle;
+            }
+            select{
+                height: 4vw;
+                vertical-align: middle;
+            }
+        #check{
+            width: 10%;
+        }  
         }
     </style>
     <title>Document</title>
@@ -545,7 +678,7 @@ const htmls = [
             <option>gmail.com</option>
         </select>
         <button>중복확인</button><br>
-        <input type="checkbox" checked>정보수신에 동의합니다.<br>
+        <input type="checkbox" checked id="check">정보수신에 동의합니다.<br>
     </div>
 </body>
 
