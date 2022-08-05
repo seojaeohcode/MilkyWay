@@ -245,6 +245,7 @@
 
 <script>
 import img1 from "../assets/vueimg/logo.png";
+import sprite from "../assets/labsprite/box_img.jpg"
 const htmls = [
     // div
     `<!DOCTYPE html>
@@ -724,17 +725,102 @@ const htmls = [
 
 </html>`
 ];
-const csss = [0];
+
+const csss = [`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #wrap2{
+            width: 100%;
+            font: 10px;
+        }
+        #Box{
+            width: 6rem;
+            height: 8rem;
+            background: url(${sprite}) no-repeat 0 0;
+            animation: ball 4s steps(9) infinite ;
+            margin: 0 auto;
+            margin-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        @keyframes ball{
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -72.5rem 0;
+                /* 이미지의 총길이 단위넣기 */
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap1">
+        <div id="Box"></div>
+    </div>
+</body>
+</html>`,
+`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    #wrap2{
+        width:100%;
+        margin:0 auto;
+    }
+        .tri1{
+            border-top: 10vw solid red;
+            border-right: 10vw solid pink;
+            border-bottom: 10vw solid blue;
+            border-left: 10vw solid yellow;
+        }
+        .tri5{
+            width: 0;
+            height: 0;
+            /* alpha transparent opacity */
+            border-right: 10vw solid transparent;
+            border-bottom: 10vw solid blue;
+            border-left: 10vw solid transparent;
+        }
+        .tri6{
+            width: 0;
+            height: 0;
+            border-top: 10vw solid transparent;
+            border-right: 10vw solid transparent;
+            border-bottom: 10vw solid blue;
+            border-left: 10vw solid yellow;
+        }
+    </style>
+    <title>삼각형그리기</title>
+</head>
+<body>
+<div id="wrap1">
+    <div class="tri1">1</div>
+    <div class="tri5">5</div>
+    <div class="tri6">6</div>
+</div>
+</body>
+</html>`];
 const jss = [0];
 
 export default {
     mounted() {
         let i = 0;
+        let j = 0;
         const htmlcategory = document.querySelector("#htmlstorage .category");
         const html = document.querySelector("#htmlstorage .view");
+        const csscategory = document.querySelector("#cssstorage .category");
+        const css = document.querySelector("#cssstorage .view");
 
         htmlcategory.innerHTML = `div vs p vs span(div)`;
-
+        csscategory.innerHTML = `sprite`
         // if (i < 4) {
         //     htmlcategory.innerHTML = `form`;
         // }else if(i < 6){
@@ -743,9 +829,7 @@ export default {
 
         // 애니메이션과 태그카테고리 수정
         html.innerHTML = htmls[0];
-
-        const css = document.querySelector("#cssstorage .view");
-        console.log(css);
+        css.innerHTML = csss[0];
 
         const js = document.querySelector("#jsstorage .view");
         console.log(js);
@@ -809,104 +893,30 @@ export default {
             }
         }
         function cssMinus() {
-            if (i - 1 < 0) {
-                i = htmls.length - 1;
+            if (j - 1 < 0) {
+                j = csss.length - 1;
             }
             else {
-                i--;
+                j--;
             }
-            html.innerHTML = htmls[i];
 
-            if (i == 0) {
-                htmlcategory.innerHTML = `div vs p vs span(div)`;
-            } else if (i == 1) {
-                htmlcategory.innerHTML = `div vs p vs span(p)`;
-            } else if (i == 2) {
-                htmlcategory.innerHTML = `div vs p vs span(span)`;
-            } else if (i == 3) {
-                htmlcategory.innerHTML = `table`;
-            } else if (i == 4) {
-                htmlcategory.innerHTML = `image`;
-            } else if (i == 5) {
-                htmlcategory.innerHTML = `form`;
-            } else if (i == 6) {
-                htmlcategory.innerHTML = `Iframe`;
-            }
+            css.innerHTML = csss[j];
         }
         function cssPlus() {
-            if (i + 1 >= htmls.length) {
-                i = htmls.length - 1;
+            if (j + 1 >= csss.length) {
+                j = 0;
             }
             else {
-                i++;
+                j++;
             }
-            html.innerHTML = htmls[i];
 
-            if (i == 0) {
-                htmlcategory.innerHTML = `div vs p vs span(div)`;
-            } else if (i == 1) {
-                htmlcategory.innerHTML = `div vs p vs span(p)`;
-            } else if (i == 2) {
-                htmlcategory.innerHTML = `div vs p vs span(span)`;
-            } else if (i == 3) {
-                htmlcategory.innerHTML = `table`;
-            } else if (i == 4) {
-                htmlcategory.innerHTML = `image`;
-            } else if (i == 5) {
-                htmlcategory.innerHTML = `form`;
-            } else if (i == 6) {
-                htmlcategory.innerHTML = `Iframe`;
-            }
+            css.innerHTML = csss[j];
         }
         function jsMinus() {
-            if (i - 1 < 0) {
-                i = htmls.length - 1;
-            }
-            else {
-                i--;
-            }
-            html.innerHTML = htmls[i];
-
-            if (i == 0) {
-                htmlcategory.innerHTML = `div vs p vs span(div)`;
-            } else if (i == 1) {
-                htmlcategory.innerHTML = `div vs p vs span(p)`;
-            } else if (i == 2) {
-                htmlcategory.innerHTML = `div vs p vs span(span)`;
-            } else if (i == 3) {
-                htmlcategory.innerHTML = `table`;
-            } else if (i == 4) {
-                htmlcategory.innerHTML = `image`;
-            } else if (i == 5) {
-                htmlcategory.innerHTML = `form`;
-            } else if (i == 6) {
-                htmlcategory.innerHTML = `Iframe`;
-            }
+            
         }
         function jsPlus() {
-            if (i + 1 >= htmls.length) {
-                i = htmls.length - 1;
-            }
-            else {
-                i++;
-            }
-            html.innerHTML = htmls[i];
-
-            if (i == 0) {
-                htmlcategory.innerHTML = `div vs p vs span(div)`;
-            } else if (i == 1) {
-                htmlcategory.innerHTML = `div vs p vs span(p)`;
-            } else if (i == 2) {
-                htmlcategory.innerHTML = `div vs p vs span(span)`;
-            } else if (i == 3) {
-                htmlcategory.innerHTML = `table`;
-            } else if (i == 4) {
-                htmlcategory.innerHTML = `image`;
-            } else if (i == 5) {
-                htmlcategory.innerHTML = `form`;
-            } else if (i == 6) {
-                htmlcategory.innerHTML = `Iframe`;
-            }
+            
         }
     },
     updated() {
